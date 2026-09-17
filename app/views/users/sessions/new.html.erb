@@ -1,0 +1,82 @@
+<div class="login-page">
+
+  <div class="login-container">
+
+    <h2 class="login-title">LOGIN</h2>
+
+    <p class="login-subtitle">
+      GAMEWEBへログイン
+    </p>
+
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+      <!-- メールアドレス -->
+      <div class="login-field">
+
+        <%= f.label :email,
+                    "メールアドレス",
+                    class: "login-label" %>
+
+        <%= f.email_field :email,
+                          autofocus: true,
+                          autocomplete: "email",
+                          class: "login-input",
+                          placeholder: "example@email.com" %>
+
+      </div>
+
+
+      <!-- パスワード -->
+      <div class="login-field">
+
+        <%= f.label :password,
+                    "パスワード",
+                    class: "login-label" %>
+
+        <%= f.password_field :password,
+                             autocomplete: "current-password",
+                             class: "login-input",
+                             placeholder: "パスワードを入力" %>
+
+      </div>
+
+
+      <!-- ログイン状態を保持 -->
+      <% if devise_mapping.rememberable? %>
+
+        <div class="remember-area">
+
+          <%= f.check_box :remember_me,
+                          class: "remember-checkbox" %>
+
+          <%= f.label :remember_me,
+                      "ログイン状態を保持する",
+                      class: "remember-label" %>
+
+        </div>
+
+      <% end %>
+
+
+      <!-- ログインボタン -->
+      <div class="login-actions">
+
+        <%= f.submit "ログイン",
+                     class: "login-button" %>
+
+      </div>
+
+    <% end %>
+
+
+    <!-- Devise標準リンク -->
+    <div class="login-links">
+
+      <%= render "users/shared/links" %>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,192 @@
+<%= stylesheet_link_tag 'index', :media => "all" %>
+
+<div class="index-page">
+
+  <h3 class="page-title">一覧ページ</h3>
+
+  <div class="index-main">
+
+    <!-- =========================
+         左側
+    ========================== -->
+    <div class="side-box">
+
+      <%= link_to "新規投稿へ",
+                  new_tweet_path,
+                  class: "new-post-link" %>
+
+      <div class="tag-search-area">
+
+        <h4>タグから探す</h4>
+
+        <%= form_tag({controller:"tweets", action:"index"}, method: :get) do %>
+
+          <div class="tag-option-list">
+
+            <% Tag.all.each do |t| %>
+
+              <label class="tag-option">
+
+                <%= check_box :tag_ids,
+                              t.name,
+                              {
+                                class: "tag-checkbox",
+                                include_hidden: false
+                              } %>
+
+                <span class="tag-label">
+                  <%= t.name %>
+                </span>
+
+              </label>
+
+            <% end %>
+
+          </div>
+
+          <%= submit_tag '検索',
+                         class: "tag-search-button" %>
+
+        <% end %>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         右側：ゲーム一覧
+    ========================== -->
+    <div class="tweets-container">
+
+      <% @tweets.each do |t| %>
+
+        <div class="tweet">
+
+
+          <!-- ゲームタイトル -->
+          <div class="game-title">
+            <%= t.title %>
+          </div>
+
+
+         <!-- タグ -->
+         <div class="game-tags">
+
+          <% t.tags.each do |tag| %>
+            <span class="game-tag">
+              <%= tag.name %>
+            </span>
+          <% end %>
+
+         </div>
+
+
+          <!-- 想定プレイ時間 -->
+          <div class="playtime-area">
+
+            <div class="playtime-label">
+              想定プレイ時間
+            </div>
+
+            <div class="playtime-value">
+              <%= t.playtime %>分
+            </div>
+
+          </div>
+
+
+          <!-- ゲーム画像 -->
+          <% if t.photo.attached? %>
+
+            <div class="game-image">
+              <%= image_tag t.photo %>
+            </div>
+
+          <% end %>
+
+
+          <!-- ゲーム説明 -->
+          <div class="game-description">
+
+            <div class="description-label">
+              ゲーム説明
+            </div>
+
+            <div class="description-text">
+
+              <%= truncate(t.game_detail, length: 80, omission: "...") %>
+
+              <% if t.game_detail.present? && t.game_detail.length > 80 %>
+                <%= link_to "詳細ページで読む",
+                            tweet_path(t.id),
+                            class: "read-more-link" %>
+              <% end %>
+
+            </div>
+
+          </div>
+
+
+          <!-- カード下部 -->
+          <div class="game-card-bottom">
+
+
+            <!-- 投稿者ID -->
+            <div class="game-user-id">
+              投稿者：<%= t.user.username %>
+            </div>
+
+
+            <!-- 編集・詳細・削除 -->
+            <div class="game-actions">
+
+              <%= link_to "編集する",
+                          edit_tweet_path(t.id) %>
+
+              <%= link_to "詳細へ",
+                          tweet_path(t.id) %>
+
+              <%= button_to "削除する",
+                            tweet_path(t.id),
+                            method: :delete %>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      <% end %>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       ページ最下部：タグ追加
+  ========================== -->
+  <div class="tag-add-area">
+
+    <h4>タグを追加</h4>
+
+    <p class="tag-add-note">
+      新規投稿時に該当するタグがない場合のみ追加してください。
+    </p>
+
+
+    <%= form_tag({controller:"tweets", action:"index"}, method: :get) do %>
+
+      <%= text_field_tag :tag,
+                         nil,
+                         class: "tag-input" %>
+
+      <%= submit_tag 'タグを追加',
+                     class: "tag-add-button" %>
+
+    <% end %>
+
+  </div>
+
+</div>

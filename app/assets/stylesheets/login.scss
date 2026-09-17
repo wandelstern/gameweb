@@ -1,0 +1,250 @@
+/* =================================
+   ログインページ
+================================= */
+
+.login-page {
+  width: 100%;
+
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 70px 20px 100px;
+
+  box-sizing: border-box;
+}
+
+
+/* =================================
+   ログインカード
+================================= */
+
+.login-container {
+  width: 100%;
+  max-width: 520px;
+
+  padding: 40px 45px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      #101827,
+      #090e18
+    );
+
+  border: 1px solid rgba(0, 191, 255, 0.55);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 0 14px rgba(0, 191, 255, 0.18),
+    inset 0 0 20px rgba(0, 191, 255, 0.03);
+
+  color: white;
+}
+
+
+/* =================================
+   タイトル
+================================= */
+
+.login-title {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 32px;
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  color: white;
+
+  text-shadow:
+    0 0 5px #00bfff,
+    0 0 12px rgba(0, 191, 255, 0.8);
+}
+
+
+.login-subtitle {
+  margin: 8px 0 35px;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  color: #8996aa;
+}
+
+
+/* =================================
+   入力項目
+================================= */
+
+.login-field {
+  margin-bottom: 25px;
+}
+
+
+.login-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  color: #e9f4ff;
+}
+
+
+.login-input {
+  width: 100%;
+  height: 46px;
+
+  padding: 0 13px;
+
+  box-sizing: border-box;
+
+  background-color: #080d17;
+
+  color: white;
+
+  border: 1px solid #35425a;
+  border-radius: 7px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+
+.login-input::placeholder {
+  color: #5f6b80;
+}
+
+
+.login-input:focus {
+  border-color: #00bfff;
+
+  box-shadow:
+    0 0 7px rgba(0, 191, 255, 0.55);
+}
+
+
+/* =================================
+   ログイン状態を保持
+================================= */
+
+.remember-area {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 5px 0 30px;
+}
+
+
+/* 通常のチェックボックスを少し整える */
+
+.remember-checkbox {
+  width: 16px;
+  height: 16px;
+
+  accent-color: #00bfff;
+
+  cursor: pointer;
+}
+
+
+.remember-label {
+  color: #aeb8cc;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+
+/* =================================
+   ログインボタン
+================================= */
+
+.login-actions {
+  text-align: center;
+}
+
+
+.login-container .login-button {
+  width: 70%;
+
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  background-color: #0d1424;
+
+  color: white;
+
+  border: 1px solid #ff1744;
+  border-radius: 7px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 5px rgba(255, 23, 68, 0.4);
+
+  transition: 0.2s;
+}
+
+
+.login-container .login-button:hover {
+  background-color: rgba(255, 23, 68, 0.15);
+
+  box-shadow:
+    0 0 8px #ff1744,
+    0 0 18px rgba(255, 23, 68, 0.4);
+}
+
+
+/* =================================
+   下部リンク
+================================= */
+
+.login-links {
+  margin-top: 30px;
+
+  padding-top: 20px;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.login-links a {
+  color: #00bfff;
+
+  font-size: 13px;
+
+  text-decoration: none;
+
+  line-height: 2;
+}
+
+
+.login-links a:hover {
+  color: white;
+
+  text-shadow:
+    0 0 6px #00bfff;
+}

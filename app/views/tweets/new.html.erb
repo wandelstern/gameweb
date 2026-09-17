@@ -1,0 +1,117 @@
+<%= stylesheet_link_tag 'new', :media => "all" %>
+
+<div class="new-page">
+
+  <h3 class="new-page-title">新規投稿ページ</h3>
+
+  <div class="post-container">
+
+    <p class="title">ゲームを投稿する</p>
+
+    <%= form_for(@tweet, :url => { controller:'tweets', action:'create' }) do |f| %>
+
+      <div class="form-intro">
+        <%= f.label :投稿内容 %>
+      </div>
+
+
+      <!-- ゲームタイトル -->
+      <div class="field">
+        <%= f.label :ゲームタイトル, class: "field-label" %>
+
+        <%= f.text_field :title,
+                         :size => 30,
+                         class: "form-input",
+                         placeholder: "ゲームタイトルを入力" %>
+      </div>
+
+
+      
+
+
+      <!-- プレイ時間 -->
+      <div class="field">
+        <%= f.label :playtime,
+                    '1回あたりのプレイ時間',
+                    class: "field-label" %>
+
+        <div class="playtime-input-wrap">
+          <%= f.number_field :playtime,
+                            class: "form-input playtime-input",
+                            min: 0 %>
+
+          <span class="playtime-unit">分</span>
+        </div>
+      </div>
+
+
+      <!-- ゲーム画像 -->
+      <div class="field">
+        <%= f.label :ゲームプレイ画像, class: "field-label" %>
+
+        <%= f.file_field :photo,
+                         class: "form-file" %>
+      </div>
+
+
+      <!-- ゲーム内容 -->
+      <div class="field">
+        <%= f.label :ゲーム内容, class: "field-label" %>
+
+        <%= f.text_area :game_detail,
+                        :size => "30x2",
+                        class: "form-textarea",
+                        placeholder: "ゲームの内容やおすすめポイントを入力" %>
+      </div>
+
+
+      <!-- タグ -->
+      <div class="field tag-field">
+
+        <p class="field-label">
+          タグ
+        </p>
+
+        <div class="form-tag-list">
+
+          <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+
+            <label class="form-tag-option">
+
+              <%= tag.check_box class: "form-tag-checkbox" %>
+
+              <span class="form-tag-label">
+                <%= tag.text %>
+              </span>
+
+            </label>
+
+          <% end %>
+
+        </div>
+
+      </div>
+
+
+      <!-- 投稿ボタン -->
+      <div class="submit-area">
+
+        <%= f.submit "投稿する",
+                     class: "post-submit-button" %>
+
+      </div>
+
+    <% end %>
+
+
+    <div class="back-link-area">
+
+      <%= link_to "← 一覧に戻る",
+                  tweets_path,
+                  class: "back-link" %>
+
+    </div>
+
+  </div>
+
+</div>

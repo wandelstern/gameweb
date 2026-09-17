@@ -1,0 +1,224 @@
+/* =================================
+   新規登録ページ
+================================= */
+
+.signup-page {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 70px 20px 100px;
+
+  box-sizing: border-box;
+}
+
+
+/* =================================
+   登録フォームカード
+================================= */
+
+.signup-container {
+  width: 100%;
+  max-width: 560px;
+
+  padding: 40px 45px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      #101827,
+      #090e18
+    );
+
+  border: 1px solid rgba(0, 191, 255, 0.55);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 0 14px rgba(0, 191, 255, 0.18),
+    inset 0 0 20px rgba(0, 191, 255, 0.03);
+
+  color: white;
+}
+
+
+/* =================================
+   タイトル
+================================= */
+
+.signup-title {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 32px;
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  color: white;
+
+  text-shadow:
+    0 0 5px #00bfff,
+    0 0 12px rgba(0, 191, 255, 0.8);
+}
+
+
+.signup-subtitle {
+  margin: 8px 0 35px;
+
+  text-align: center;
+
+  color: #8996aa;
+
+  font-size: 14px;
+}
+
+
+/* =================================
+   入力項目
+================================= */
+
+.signup-field {
+  margin-bottom: 25px;
+}
+
+
+.signup-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #e9f4ff;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.signup-input {
+  width: 100%;
+  height: 46px;
+
+  padding: 0 13px;
+
+  box-sizing: border-box;
+
+  background-color: #080d17;
+
+  color: white;
+
+  border: 1px solid #35425a;
+  border-radius: 7px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+
+.signup-input::placeholder {
+  color: #5f6b80;
+}
+
+
+.signup-input:focus {
+  border-color: #00bfff;
+
+  box-shadow:
+    0 0 7px rgba(0, 191, 255, 0.55);
+}
+
+
+/* パスワード文字数 */
+
+.password-note {
+  margin: -5px 0 8px;
+
+  color: #778399;
+
+  font-size: 12px;
+}
+
+
+/* =================================
+   新規登録ボタン
+================================= */
+
+.signup-actions {
+  margin-top: 35px;
+
+  text-align: center;
+}
+
+
+.signup-container .signup-button {
+  width: 70%;
+
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  background-color: #0d1424;
+
+  color: white;
+
+  border: 1px solid #ff1744;
+  border-radius: 7px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 5px rgba(255, 23, 68, 0.4);
+
+  transition: 0.2s;
+}
+
+
+.signup-container .signup-button:hover {
+  background-color: rgba(255, 23, 68, 0.15);
+
+  box-shadow:
+    0 0 8px #ff1744,
+    0 0 18px rgba(255, 23, 68, 0.4);
+}
+
+
+/* =================================
+   下部リンク
+================================= */
+
+.signup-links {
+  margin-top: 30px;
+
+  padding-top: 20px;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.signup-links a {
+  color: #00bfff;
+
+  font-size: 13px;
+
+  text-decoration: none;
+
+  line-height: 2;
+}
+
+
+.signup-links a:hover {
+  color: white;
+
+  text-shadow:
+    0 0 6px #00bfff;
+}

@@ -1,0 +1,330 @@
+/* =================================
+   詳細ページ全体
+================================= */
+
+.show-page {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 40px 0 100px;
+}
+
+
+/* ページタイトル */
+
+.show-page-title {
+  margin: 0 0 30px;
+
+  text-align: center;
+
+  color: white;
+
+  font-size: 28px;
+
+  text-shadow:
+    0 0 6px #00bfff,
+    0 0 14px rgba(0, 191, 255, 0.7);
+}
+
+
+/* =================================
+   詳細カード
+================================= */
+
+.game-detail-card {
+  width: 80%;
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      #101827,
+      #090e18
+    );
+
+  color: white;
+
+  border: 1px solid rgba(0, 191, 255, 0.55);
+  border-radius: 14px;
+
+  box-shadow:
+    0 0 14px rgba(0, 191, 255, 0.18),
+    inset 0 0 20px rgba(0, 191, 255, 0.03);
+}
+
+
+/* =================================
+   ゲームタイトル
+================================= */
+
+.show-game-title {
+  margin-bottom: 25px;
+
+  font-size: 32px;
+  font-weight: 900;
+
+  color: white;
+
+  text-shadow:
+    0 0 5px rgba(0, 191, 255, 0.9),
+    0 0 12px rgba(0, 191, 255, 0.4);
+}
+
+
+/* =================================
+   基本情報
+================================= */
+
+.show-game-meta {
+  display: flex;
+  gap: 50px;
+
+  margin-bottom: 30px;
+}
+
+
+.show-genre-area,
+.show-playtime-area {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.meta-label {
+  color: #8996aa;
+
+  font-size: 12px;
+}
+
+
+/* ジャンル */
+
+.show-genre {
+  display: inline-block;
+
+  padding: 6px 14px;
+
+  background-color: rgba(0, 191, 255, 0.12);
+
+  color: #bfefff;
+
+  border: 1px solid rgba(0, 191, 255, 0.5);
+  border-radius: 20px;
+
+  font-size: 14px;
+}
+
+
+/* プレイ時間 */
+
+.show-playtime {
+  font-size: 21px;
+  font-weight: bold;
+
+  color: white;
+}
+
+
+/* =================================
+   ゲーム画像
+================================= */
+
+.show-game-image {
+  width: 100%;
+
+  margin: 10px 0 35px;
+
+  text-align: center;
+}
+
+
+.show-game-image img {
+  width: 100%;
+  max-height: 480px;
+
+  object-fit: contain;
+
+  background-color: #070b14;
+
+  border: 1px solid rgba(0, 191, 255, 0.4);
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 12px rgba(0, 191, 255, 0.2);
+}
+
+
+/* =================================
+   共通見出し
+================================= */
+
+.show-section-title {
+  margin-bottom: 12px;
+
+  color: #aeb8cc;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* =================================
+   ゲーム説明
+================================= */
+
+.show-description {
+  margin-bottom: 35px;
+}
+
+
+.show-description-text {
+  padding: 20px;
+
+  background-color: rgba(255, 255, 255, 0.025);
+
+  color: #f0f4ff;
+
+  border-left: 2px solid #00bfff;
+
+  line-height: 1.9;
+
+  word-break: break-word;
+}
+
+
+/* =================================
+   タグ
+================================= */
+
+.show-tags {
+  margin-bottom: 35px;
+}
+
+
+.show-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+.show-tag {
+  display: inline-block;
+
+  padding: 7px 13px;
+
+  background-color: #0d1424;
+
+  color: #dce6f7;
+
+  border: 1px solid #35425a;
+  border-radius: 8px;
+}
+
+
+.show-tag:hover {
+  border-color: #00bfff;
+
+  box-shadow:
+    0 0 6px rgba(0, 191, 255, 0.5);
+}
+
+
+/* =================================
+   投稿者
+================================= */
+
+.show-author {
+  padding-top: 20px;
+
+  margin-top: 10px;
+
+  color: #778399;
+
+  font-size: 13px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =================================
+   下部ボタン
+================================= */
+
+.show-actions {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 35px;
+}
+
+
+/* 一覧に戻る */
+
+.show-back-button {
+  padding: 10px 18px;
+
+  color: #00bfff;
+
+  text-decoration: none;
+
+  border: 1px solid #00bfff;
+  border-radius: 7px;
+
+  transition: 0.2s;
+}
+
+
+.show-back-button:hover {
+  color: white;
+
+  background-color: rgba(0, 191, 255, 0.12);
+
+  box-shadow:
+    0 0 8px rgba(0, 191, 255, 0.65);
+}
+
+
+/* 編集 */
+
+.show-edit-button {
+  padding: 10px 25px;
+
+  color: white;
+
+  text-decoration: none;
+
+  background-color: #0d1424;
+
+  border: 1px solid #ff1744;
+  border-radius: 7px;
+
+  box-shadow:
+    0 0 5px rgba(255, 23, 68, 0.35);
+
+  transition: 0.2s;
+}
+
+
+.show-edit-button:hover {
+  color: white;
+
+  background-color: rgba(255, 23, 68, 0.15);
+
+  box-shadow:
+    0 0 8px #ff1744,
+    0 0 16px rgba(255, 23, 68, 0.35);
+}

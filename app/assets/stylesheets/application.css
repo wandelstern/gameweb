@@ -1,0 +1,349 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+     min-height: 100vh;
+     position: relative;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+    Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+  height: 80px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 191, 255, 0.12),
+      rgba(7, 11, 20, 0.95) 45%,
+      rgba(255, 23, 68, 0.12)
+    ),
+    #070b14;
+
+  font-weight: bold;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid #00bfff;
+
+  box-shadow:
+    0 2px 8px rgba(0, 191, 255, 0.35),
+    0 4px 15px rgba(255, 23, 68, 0.15);
+}
+
+header a {
+  color: white;
+
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+header a:hover {
+  color: #ffffff;
+
+  text-shadow:
+    0 0 5px #ff1744,
+    0 0 10px #ff1744;
+}
+
+
+header h1 {
+  color: white;
+
+  margin-left: 30px;
+
+  font-size: 30px;
+
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 0 5px #00bfff,
+    0 0 10px rgba(0, 191, 255, 0.8),
+    0 0 18px rgba(0, 191, 255, 0.5);
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+}
+
+header li {
+  list-style: none;
+
+  margin-right: 30px;
+}
+
+header button {
+  padding: 9px 18px;
+
+  background-color: transparent;
+
+  color: white;
+
+  border: 1px solid #ff1744;
+  border-radius: 6px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+header button:hover {
+  background-color: rgba(255, 23, 68, 0.15);
+
+  box-shadow:
+    0 0 7px #ff1744,
+    0 0 14px rgba(255, 23, 68, 0.5);
+}
+
+
+footer {
+  color: white;
+  height: 30px;
+  background-color: #000;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: flex-end;
+}
+
+/* =================================
+   gameweb 全体デザイン
+================================= */
+
+:root {
+  --bg-main: #070b14;
+  --bg-sub: #0d1424;
+  --bg-card: #101827;
+
+  --text-main: #f5f7ff;
+  --text-sub: #aeb8cc;
+
+  --neon-blue: #00bfff;
+  --neon-red: #ff1744;
+
+  --border-blue: rgba(0, 191, 255, 0.55);
+  --border-red: rgba(255, 23, 68, 0.55);
+}
+
+
+/* ページ全体 */
+
+body {
+  margin: 0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0, 191, 255, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(255, 23, 68, 0.10),
+      transparent 35%
+    ),
+    var(--bg-main);
+
+  color: var(--text-main);
+
+  font-family:
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+
+  min-height: 100vh;
+}
+
+
+/* リンク */
+
+a {
+  color: var(--neon-blue);
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+a:hover {
+  color: #ffffff;
+
+  text-shadow:
+    0 0 6px var(--neon-blue),
+    0 0 12px var(--neon-blue);
+}
+
+
+/* 入力欄 */
+
+input[type="text"],
+input[type="search"],
+textarea,
+select {
+  background-color: #080d17;
+
+  color: white;
+
+  border: 1px solid #35425a;
+  border-radius: 6px;
+
+  outline: none;
+}
+
+
+/* 入力時 */
+
+input[type="text"]:focus,
+input[type="search"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--neon-blue);
+
+  box-shadow:
+    0 0 5px rgba(0, 191, 255, 0.5);
+}
+
+
+/* 通常ボタン */
+
+input[type="submit"],
+button {
+  background-color: #101827;
+
+  color: white;
+
+  border: 1px solid var(--neon-blue);
+  border-radius: 6px;
+
+  transition: 0.2s;
+}
+
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: rgba(0, 191, 255, 0.15);
+
+  box-shadow:
+    0 0 7px rgba(0, 191, 255, 0.8);
+
+  cursor: pointer;
+}
+
+/* =================================
+   GAMEWEB ロゴ
+================================= */
+
+.gameweb-logo {
+  margin: 0 0 0 30px;
+
+  font-size: 34px;
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  font-family: Arial Black, Impact, sans-serif;
+
+  transform: skew(-6deg);
+}
+
+
+/* ロゴのリンク */
+
+.logo-link {
+  text-decoration: none;
+
+  display: inline-block;
+
+  transition: 0.25s;
+}
+
+
+/* GAME */
+
+.logo-game {
+  color: #ffffff;
+
+  text-shadow:
+    -2px 0 0 #00bfff,
+    0 0 5px #00bfff,
+    0 0 10px #00bfff,
+    0 0 20px rgba(0, 191, 255, 0.8);
+}
+
+
+/* WEB */
+
+.logo-web {
+  color: #ffffff;
+
+  margin-left: 4px;
+
+  text-shadow:
+    2px 0 0 #ff1744,
+    0 0 5px #ff1744,
+    0 0 10px #ff1744,
+    0 0 20px rgba(255, 23, 68, 0.8);
+}
+
+
+/* マウスを乗せた時 */
+
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
+
+/* GAMEを少し強調 */
+
+.logo-link:hover .logo-game {
+  text-shadow:
+    -2px 0 0 #00bfff,
+    0 0 8px #00bfff,
+    0 0 16px #00bfff,
+    0 0 28px rgba(0, 191, 255, 0.9);
+}
+
+
+/* WEBを少し強調 */
+
+.logo-link:hover .logo-web {
+  text-shadow:
+    2px 0 0 #ff1744,
+    0 0 8px #ff1744,
+    0 0 16px #ff1744,
+    0 0 28px rgba(255, 23, 68, 0.9);
+}

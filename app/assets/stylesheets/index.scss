@@ -1,0 +1,805 @@
+/* =========================
+   ページ全体
+========================= */
+
+.index-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.page-title {
+  width: 100%;
+  margin: 30px 0 25px;
+  text-align: center;
+}
+
+
+/* =========================
+   メイン
+========================= */
+
+.index-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+
+/* =========================
+   左サイド
+========================= */
+
+.side-box {
+  width: 220px;
+  flex-shrink: 0;
+
+  padding: 20px;
+
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+
+  box-sizing: border-box;
+}
+
+
+/* 新規投稿 */
+
+.new-post-link {
+  display: block;
+
+  padding: 12px;
+  margin-bottom: 25px;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: #333333;
+
+  border: 1px solid #999999;
+  border-radius: 6px;
+}
+
+
+/* =========================
+   タグ検索
+========================= */
+
+.tag-search-area h4 {
+  margin: 0 0 15px;
+
+  text-align: center;
+}
+
+
+/* タグ全体 */
+
+.tag-option-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+
+/* クリック範囲 */
+
+.tag-option {
+  display: inline-block;
+}
+
+
+/* 本物のチェックボックス */
+
+.tag-checkbox {
+  display: none;
+}
+
+
+/* タグの箱 */
+
+.tag-label {
+  display: inline-block;
+
+  padding: 8px 10px;
+
+  background-color: white;
+
+  border: 1px solid #bbbbbb;
+  border-radius: 7px;
+
+  color: #333333;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  user-select: none;
+}
+
+
+/* マウスを乗せたとき */
+
+.tag-label:hover {
+  background-color: #eeeeee;
+}
+
+
+/* 選択されたタグ */
+
+.tag-checkbox:checked + .tag-label {
+  background-color: #8ecae6;
+  border-color: #219ebc;
+
+  color: white;
+
+  font-weight: bold;
+}
+
+
+/* 検索 */
+
+.tag-search-button {
+  display: block;
+
+  width: 80%;
+  padding: 9px;
+
+  margin: 20px auto 0;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+}
+
+/* =========================
+   ゲーム一覧
+========================= */
+
+.tweets-container {
+  flex: 1;
+
+  min-width: 0;
+
+  margin: 0;
+}
+
+
+/* ゲーム1件 */
+
+.tweet {
+  width: 100%;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+}
+
+
+.main-box {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 30px;
+}
+
+
+.left-container {
+  flex: 1;
+  min-width: 0;
+}
+
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+/* ゲームタイトル */
+
+.game-title {
+  margin-bottom: 10px;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.game-info {
+  margin-bottom: 6px;
+}
+
+
+.game-detail {
+  margin: 10px 0 15px;
+}
+
+
+.game-image {
+  margin-top: 15px;
+}
+
+
+.game-image img {
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 8px;
+}
+
+
+/* =========================
+   タグ追加
+========================= */
+
+.tag-add-area {
+  width: 350px;
+
+  margin: 80px auto 0;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
+
+
+.tag-add-area h4 {
+  margin-top: 0;
+}
+
+
+.tag-input {
+  width: 100%;
+
+  padding: 10px;
+
+  margin-bottom: 15px;
+
+  box-sizing: border-box;
+}
+
+
+.tag-add-button {
+  width: 100%;
+
+  padding: 10px;
+
+  cursor: pointer;
+}
+
+
+.side-box .tag-search-area .tag-search-button {
+  display: block;
+  width: 70% !important;
+  padding: 9px;
+  margin: 20px auto 0 !important;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* =================================
+   Gaming Theme
+================================= */
+
+
+/* 一覧ページタイトル */
+
+.page-title {
+  color: #ffffff;
+
+  text-shadow:
+    0 0 6px #00bfff,
+    0 0 14px rgba(0, 191, 255, 0.8);
+}
+
+
+/* =========================
+   左側メニュー
+========================= */
+
+.side-box {
+  background: linear-gradient(
+    145deg,
+    #101827,
+    #090e18
+  );
+
+  border: 1px solid rgba(0, 191, 255, 0.65);
+
+  box-shadow:
+    0 0 8px rgba(0, 191, 255, 0.25),
+    inset 0 0 15px rgba(0, 191, 255, 0.04);
+
+  color: white;
+}
+
+
+/* 新規投稿ボタン */
+
+.new-post-link {
+  color: white;
+
+  background-color: #0d1424;
+
+  border: 1px solid #ff1744;
+
+  box-shadow:
+    0 0 5px rgba(255, 23, 68, 0.4);
+
+  transition: 0.2s;
+}
+
+
+.new-post-link:hover {
+  color: white;
+
+  background-color: rgba(255, 23, 68, 0.15);
+
+  box-shadow:
+    0 0 8px rgba(255, 23, 68, 0.8),
+    0 0 16px rgba(255, 23, 68, 0.4);
+}
+
+
+/* タグタイトル */
+
+.tag-search-area h4 {
+  color: white;
+
+  text-shadow:
+    0 0 5px rgba(0, 191, 255, 0.8);
+}
+
+
+/* =========================
+   タグ
+========================= */
+
+.tag-label {
+  background-color: #0d1424;
+
+  color: #dce6f7;
+
+  border: 1px solid #35425a;
+
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s,
+    color 0.2s;
+}
+
+
+/* タグにカーソル */
+
+.tag-label:hover {
+  background-color: rgba(0, 191, 255, 0.10);
+
+  border-color: #00bfff;
+
+  color: white;
+
+  box-shadow:
+    0 0 6px rgba(0, 191, 255, 0.5);
+}
+
+
+/* 選択されたタグ */
+
+.tag-checkbox:checked + .tag-label {
+  background-color: rgba(0, 191, 255, 0.20);
+
+  border-color: #00bfff;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 0 6px #00bfff,
+    inset 0 0 8px rgba(0, 191, 255, 0.25);
+
+  text-shadow:
+    0 0 5px #00bfff;
+}
+
+
+/* 検索 */
+
+.side-box .tag-search-area .tag-search-button {
+  background-color: #0d1424;
+
+  color: white;
+
+  border: 1px solid #00bfff;
+
+  box-shadow:
+    0 0 5px rgba(0, 191, 255, 0.4);
+}
+
+
+.side-box .tag-search-area .tag-search-button:hover {
+  background-color: rgba(0, 191, 255, 0.15);
+
+  box-shadow:
+    0 0 8px rgba(0, 191, 255, 0.8);
+}
+
+
+/* =========================
+   ゲーム投稿カード
+========================= */
+
+.tweet {
+  background: linear-gradient(
+    135deg,
+    #101827,
+    #0b111d
+  );
+
+  color: white;
+
+  border: 1px solid rgba(0, 191, 255, 0.4);
+
+  box-shadow:
+    0 0 8px rgba(0, 191, 255, 0.12);
+
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+
+/* カードにマウスを乗せたとき */
+
+.tweet:hover {
+  transform: translateY(-3px);
+
+  border-color: #00bfff;
+
+  box-shadow:
+    0 0 12px rgba(0, 191, 255, 0.35);
+}
+
+
+/* ゲームタイトル */
+
+.game-title {
+  color: white;
+
+  text-shadow:
+    0 0 4px rgba(0, 191, 255, 0.7);
+}
+
+
+/* ゲーム画像 */
+
+.game-image img {
+  border: 1px solid rgba(0, 191, 255, 0.4);
+
+  box-shadow:
+    0 0 8px rgba(0, 191, 255, 0.2);
+}
+
+
+/* =========================
+   タグ追加
+========================= */
+
+.tag-add-area {
+  background: linear-gradient(
+    145deg,
+    #101827,
+    #090e18
+  );
+
+  color: white;
+
+  border: 1px solid rgba(255, 23, 68, 0.55);
+
+  box-shadow:
+    0 0 10px rgba(255, 23, 68, 0.18);
+}
+
+
+.tag-add-area h4 {
+  color: white;
+
+  text-shadow:
+    0 0 6px rgba(255, 23, 68, 0.8);
+}
+
+
+.tag-add-button {
+  background-color: #0d1424;
+
+  color: white;
+
+  border: 1px solid #ff1744;
+
+  transition: 0.2s;
+}
+
+
+.tag-add-button:hover {
+  background-color: rgba(255, 23, 68, 0.15);
+
+  box-shadow:
+    0 0 8px rgba(255, 23, 68, 0.7);
+}
+
+/* =================================
+   ゲームカード
+================================= */
+
+.tweet {
+  width: 100%;
+
+  padding: 25px;
+
+  margin-bottom: 25px;
+
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    135deg,
+    #101827,
+    #0b111d
+  );
+
+  color: white;
+
+  border: 1px solid rgba(0, 191, 255, 0.45);
+  border-radius: 12px;
+
+  box-shadow:
+    0 0 10px rgba(0, 191, 255, 0.15);
+}
+
+
+/* =========================
+   タイトル
+========================= */
+
+.game-title {
+  margin-bottom: 8px;
+
+  font-size: 26px;
+  font-weight: bold;
+
+  color: white;
+
+  text-shadow:
+    0 0 5px rgba(0, 191, 255, 0.8);
+}
+
+
+/* =========================
+   ジャンル
+========================= */
+
+.game-genre {
+  display: inline-block;
+
+  padding: 5px 12px;
+
+  margin-bottom: 25px;
+
+  background-color: rgba(0, 191, 255, 0.12);
+
+  color: #bfefff;
+
+  border: 1px solid rgba(0, 191, 255, 0.45);
+  border-radius: 15px;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   プレイ時間
+========================= */
+
+.playtime-area {
+  margin-bottom: 25px;
+}
+
+
+.playtime-label {
+  margin-bottom: 5px;
+
+  color: #8996aa;
+
+  font-size: 13px;
+}
+
+
+.playtime-value {
+  font-size: 20px;
+  font-weight: bold;
+
+  color: white;
+}
+
+
+/* =========================
+   ゲーム画像
+========================= */
+
+.game-image {
+  width: 100%;
+
+  margin: 5px 0 25px;
+
+  text-align: center;
+}
+
+
+.game-image img {
+  width: 100%;
+  max-height: 380px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(0, 191, 255, 0.4);
+
+  box-shadow:
+    0 0 10px rgba(0, 191, 255, 0.2);
+}
+
+
+/* =========================
+   説明
+========================= */
+
+.game-description {
+  padding-top: 5px;
+
+  margin-bottom: 30px;
+}
+
+
+.description-label {
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  color: #aeb8cc;
+}
+
+
+.description-text {
+  line-height: 1.8;
+
+  color: #f0f4ff;
+
+  word-break: break-word;
+}
+
+
+/* =========================
+   カード下部
+========================= */
+
+.game-card-bottom {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  padding-top: 15px;
+
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+
+/* 投稿者ID */
+
+.game-user-name {
+  color: #778399;
+  font-size: 12px;
+}
+
+
+/* 編集・詳細・削除 */
+
+.game-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+
+.game-actions a {
+  color: #00bfff;
+
+  font-size: 14px;
+}
+
+
+.game-actions a:hover {
+  color: white;
+
+  text-shadow:
+    0 0 6px #00bfff;
+}
+
+.tag-add-note {
+  margin: 0 0 18px;
+
+  color: #8996aa;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.read-more-link {
+  display: inline-block;
+
+  margin-left: 8px;
+
+  color: #00bfff;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+
+.read-more-link:hover {
+  color: white;
+
+  text-shadow:
+    0 0 5px #00bfff,
+    0 0 10px rgba(0, 191, 255, 0.8);
+}
+
+/* =========================
+   ゲームタグ
+========================= */
+
+.game-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 25px;
+}
+
+
+.game-tag {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  background-color: rgba(0, 191, 255, 0.12);
+
+  color: #bfefff;
+
+  border: 1px solid rgba(0, 191, 255, 0.5);
+  border-radius: 15px;
+
+  font-size: 13px;
+}

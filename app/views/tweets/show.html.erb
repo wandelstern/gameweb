@@ -1,0 +1,102 @@
+<%= stylesheet_link_tag 'show', :media => "all" %>
+
+<div class="show-page">
+
+  <h3 class="show-page-title">ゲーム詳細</h3>
+
+  <div class="game-detail-card">
+
+    <!-- ゲームタイトル -->
+    <div class="show-game-title">
+      <%= @tweet.title %>
+    </div>
+
+
+    <!-- ジャンル・プレイ時間 -->
+    <div class="show-game-meta">
+
+      
+
+
+      <div class="show-playtime-area">
+        <span class="meta-label">想定プレイ時間</span>
+
+        <span class="show-playtime">
+          <%= @tweet.playtime %>分
+        </span>
+      </div>
+
+    </div>
+
+
+    <!-- ゲーム画像 -->
+    <% if @tweet.photo.attached? %>
+
+      <div class="show-game-image">
+        <%= image_tag @tweet.photo %>
+      </div>
+
+    <% end %>
+
+
+    <!-- ゲーム説明 -->
+    <div class="show-description">
+
+      <div class="show-section-title">
+        ゲーム説明
+      </div>
+
+      <div class="show-description-text">
+        <%= @tweet.game_detail %>
+      </div>
+
+    </div>
+
+
+    <!-- タグ -->
+    <div class="show-tags">
+
+      <div class="show-section-title">
+        タグ
+      </div>
+
+      <div class="show-tag-list">
+
+        <% @tweet.tags.each do |tag| %>
+
+          <span class="show-tag">
+            <%= tag.name %>
+          </span>
+
+        <% end %>
+
+      </div>
+
+    </div>
+
+
+    <!-- 投稿者 -->
+    <div class="show-author">
+
+      投稿者：
+      <%= @tweet.user&.username.presence || "ユーザー名未設定" %>
+
+    </div>
+
+
+    <!-- 操作ボタン -->
+    <div class="show-actions">
+
+      <%= link_to "← 一覧に戻る",
+                  tweets_path,
+                  class: "show-back-button" %>
+
+      <%= link_to "編集する",
+                  edit_tweet_path(@tweet.id),
+                  class: "show-edit-button" %>
+
+    </div>
+
+  </div>
+
+</div>

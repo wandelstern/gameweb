@@ -1,0 +1,25 @@
+<%= form_for @tweet do |f| %>
+
+  <div class="field">
+    <%= f.label :ゲームタイトル %>
+    <%= f.text_field :title, :size => 30 %>
+  </div>
+
+ 
+  <div class="field">
+    <%= f.label :playtime, '1回あたりのプレイ時間'  %>
+    <%= f.number_field :playtime, :size => 10 %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :ゲーム画像 %>
+    <%= f.text_field :image, :size => 30 %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :ゲーム内容  %>
+    <%= f.text_area :game_detail, :size => "30x2" %>
+  <%= f.submit "編集する" %>
+<% end %>

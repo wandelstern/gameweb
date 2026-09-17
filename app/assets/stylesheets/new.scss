@@ -1,0 +1,412 @@
+/* =================================
+   新規投稿ページ
+================================= */
+
+.new-page {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding-bottom: 100px;
+}
+
+
+/* ページタイトル */
+
+.new-page-title {
+  margin: 30px 0 25px;
+
+  text-align: center;
+
+  color: white;
+
+  text-shadow:
+    0 0 6px #00bfff,
+    0 0 14px rgba(0, 191, 255, 0.7);
+}
+
+
+/* =================================
+   投稿フォーム本体
+================================= */
+
+.post-container {
+  width: 70%;
+  max-width: 750px;
+
+  margin: 0 auto;
+
+  padding: 35px 45px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      #101827,
+      #090e18
+    );
+
+  border: 1px solid rgba(0, 191, 255, 0.55);
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 0 12px rgba(0, 191, 255, 0.18),
+    inset 0 0 20px rgba(0, 191, 255, 0.03);
+
+  color: white;
+}
+
+
+/* フォームタイトル */
+
+.title {
+  margin-bottom: 15px;
+
+  font-size: 28px;
+  font-weight: bold;
+
+  text-align: center;
+
+  color: white;
+
+  text-shadow:
+    0 0 5px rgba(0, 191, 255, 0.8);
+}
+
+
+.form-intro {
+  margin-bottom: 30px;
+
+  text-align: center;
+
+  color: #aeb8cc;
+
+  font-size: 14px;
+}
+
+
+/* =================================
+   各入力項目
+================================= */
+
+.field {
+  margin-bottom: 28px;
+}
+
+
+.field-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  color: #e9f4ff;
+}
+
+
+/* テキスト入力 */
+
+.form-input {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  background-color: #080d17;
+
+  color: white;
+
+  border: 1px solid #35425a;
+  border-radius: 7px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+
+/* セレクト */
+
+.form-select {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  background-color: #080d17;
+
+  color: white;
+
+  border: 1px solid #35425a;
+  border-radius: 7px;
+
+  outline: none;
+}
+
+
+/* テキストエリア */
+
+.form-textarea {
+  width: 100%;
+  min-height: 120px;
+
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  resize: vertical;
+
+  background-color: #080d17;
+
+  color: white;
+
+  border: 1px solid #35425a;
+  border-radius: 7px;
+
+  outline: none;
+
+  font-family: inherit;
+}
+
+
+/* 選択・入力したとき */
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #00bfff;
+
+  box-shadow:
+    0 0 6px rgba(0, 191, 255, 0.55);
+}
+
+
+/* =================================
+   画像選択
+================================= */
+
+.form-file {
+  width: 100%;
+
+  padding: 10px;
+
+  box-sizing: border-box;
+
+  background-color: #080d17;
+
+  color: #dce6f7;
+
+  border: 1px solid #35425a;
+  border-radius: 7px;
+}
+
+
+.form-file::file-selector-button {
+  padding: 8px 14px;
+
+  margin-right: 12px;
+
+  background-color: #101827;
+
+  color: white;
+
+  border: 1px solid #00bfff;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.form-file::file-selector-button:hover {
+  background-color: rgba(0, 191, 255, 0.15);
+
+  box-shadow:
+    0 0 6px rgba(0, 191, 255, 0.6);
+}
+
+
+/* =================================
+   タグ
+================================= */
+
+.tag-field {
+  padding-top: 5px;
+}
+
+
+.form-tag-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+/* タグのクリック範囲 */
+
+.form-tag-option {
+  display: inline-block;
+}
+
+
+/* 元のチェックボックスを非表示 */
+
+.form-tag-checkbox {
+  display: none;
+}
+
+
+/* タグ本体 */
+
+.form-tag-label {
+  display: inline-block;
+
+  padding: 9px 14px;
+
+  background-color: #0d1424;
+
+  color: #dce6f7;
+
+  border: 1px solid #35425a;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  user-select: none;
+
+  transition: 0.2s;
+}
+
+
+/* タグにマウスを乗せる */
+
+.form-tag-label:hover {
+  color: white;
+
+  border-color: #00bfff;
+
+  background-color: rgba(0, 191, 255, 0.1);
+
+  box-shadow:
+    0 0 6px rgba(0, 191, 255, 0.45);
+}
+
+
+/* 選択済みタグ */
+
+.form-tag-checkbox:checked + .form-tag-label {
+  color: white;
+
+  background-color: rgba(0, 191, 255, 0.2);
+
+  border-color: #00bfff;
+
+  box-shadow:
+    0 0 6px #00bfff,
+    inset 0 0 8px rgba(0, 191, 255, 0.2);
+
+  text-shadow:
+    0 0 5px #00bfff;
+}
+
+
+/* =================================
+   投稿ボタン
+================================= */
+
+.submit-area {
+  margin-top: 40px;
+
+  text-align: center;
+}
+
+
+.post-container .post-submit-button {
+  width: 220px;
+
+  padding: 12px;
+
+  margin: 0;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  background-color: #0d1424;
+
+  color: white;
+
+  border: 1px solid #ff1744;
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 5px rgba(255, 23, 68, 0.4);
+
+  transition: 0.2s;
+}
+
+
+.post-container .post-submit-button:hover {
+  background-color: rgba(255, 23, 68, 0.15);
+
+  box-shadow:
+    0 0 8px #ff1744,
+    0 0 18px rgba(255, 23, 68, 0.4);
+}
+
+
+/* =================================
+   一覧へ戻る
+================================= */
+
+.back-link-area {
+  margin-top: 30px;
+
+  text-align: center;
+}
+
+
+.back-link {
+  color: #aeb8cc;
+
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+
+.back-link:hover {
+  color: #00bfff;
+
+  text-shadow:
+    0 0 6px #00bfff;
+}
+
+.playtime-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.playtime-input {
+  flex: 1;
+}
+
+.playtime-unit {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+}
