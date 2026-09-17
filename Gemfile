@@ -70,3 +70,5 @@ group :production do
   gem 'pg'
 end
 
+gem "json", "~> 2.10"
+
