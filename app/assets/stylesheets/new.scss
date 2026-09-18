@@ -410,3 +410,39 @@
   font-weight: bold;
   font-size: 16px;
 }
+
+/* =================================
+   編集ページ：現在の画像
+================================= */
+
+.edit-current-image {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.edit-current-image img {
+  width: 100%;
+  max-height: 350px;
+
+  object-fit: contain;
+
+  background-color: #070b14;
+
+  border: 1px solid rgba(0, 191, 255, 0.4);
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 10px rgba(0, 191, 255, 0.2);
+}
+
+
+/* 画像変更についての補足 */
+
+.edit-image-note {
+  margin-top: 8px;
+
+  color: #778399;
+
+  font-size: 12px;
+}
